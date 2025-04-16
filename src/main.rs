@@ -1,6 +1,7 @@
 mod reverse_array;
 mod palindrom;
 mod merge_two_arrays;
+mod first_non_repeating_character;
 
 fn main() {
     let arr:[i32;5] = [1,2,3,4,5];
@@ -16,4 +17,11 @@ fn main() {
    }
    let merged_arr = merge_two_arrays::merge_two_arrays(arr1, arr2);
    println!("{:?}" ,merged_arr);
+
+   let non_repeating_char = first_non_repeating_character::first_non_repeating_chracter_using_pointer("aabbc");
+   println!("{}",non_repeating_char);
+
+   let non_repeating_char = first_non_repeating_character::first_non_repeating_chracter_using_hashmap("aabbc");
+   println!("{}",non_repeating_char);
+
 }
