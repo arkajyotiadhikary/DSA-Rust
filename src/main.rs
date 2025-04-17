@@ -2,6 +2,7 @@ mod reverse_array;
 mod palindrom;
 mod merge_two_arrays;
 mod first_non_repeating_character;
+mod stack;
 
 fn main() {
     let arr:[i32;5] = [1,2,3,4,5];
@@ -23,5 +24,12 @@ fn main() {
 
    let non_repeating_char = first_non_repeating_character::first_non_repeating_chracter_using_hashmap("aabbc");
    println!("{}",non_repeating_char);
+
+   let mut stack = stack::Stack::new();
+    stack.push(1);
+    stack.push(2);
+    println!("{:?}", stack.top());
+    println!("{:?}", stack.pop());
+    println!("{:?}", stack.empty());
 
 }
